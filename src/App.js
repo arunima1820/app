@@ -4,9 +4,9 @@ import './App.css';
 import PropertyCard from './Card';
 import { useEffect, useState } from 'react';
 import NavScrollExample from './Navbar';
+import { Row, Col } from 'react-bootstrap';
 
 function App() {
-  
   const[properties, setProperties] = useState([])
  
   useEffect(() => {
@@ -19,10 +19,15 @@ function App() {
   const ShowProperties = function() {
     return(
       <>
+      <Row>
       {properties.map((property, index) => {
         return (
-        <PropertyCard property={property} key={index} />)
+          <Col className="col-6">
+          <PropertyCard property={property} key={index} />
+          </Col>
+        )
       })}
+      </Row>
     </>
     );
   }
