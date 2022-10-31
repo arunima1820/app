@@ -1,0 +1,32 @@
+.navbar .navbar-brand img {
+    height: 3rem;
+}
+
+.navbar {
+    background-color: rgb(231, 166, 120);
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+#search-bar {
+    align-content: center;
+}
+
+body {
+    background-color: rgb(255, 235, 205);
+}
+
+.teal-button {
+    background-color: teal !important;
+    color: white !important;
+}
+
+.carousel-item {
+    max-height: 85vh;
+
+}
+
+.col {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
