@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import KitchenSinkExample from './Card';
+import PropertyCard from './Card';
 import { useEffect, useState } from 'react';
 
 function App() {
@@ -15,13 +15,13 @@ function App() {
     console.log("properties", properties)
   }, [])
 
-  const PropertyCard = function(property) {
+  const ShowProperties = function() {
     return(
       <>
-      {properties.map(property => {
+      {properties.map((property, index) => {
         console.log("app", property)
         return (
-        <KitchenSinkExample property={property} />)
+        <PropertyCard property={property} key={index} />)
       })}
     </>
     );
@@ -29,7 +29,7 @@ function App() {
 
   return (
     <>
-      {PropertyCard(properties)}
+      {ShowProperties()}
     </>
   );
 }
