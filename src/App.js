@@ -1,24 +1,24 @@
-import logo from './logo.svg';
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import KitchenSinkExample from './Card';
+import { useEffect, useState } from 'react';
 
 function App() {
+  
+  const[properties, setProperties] = useState([])
+  fetch("http://localhost:3000/properties.json")
+  .then(response => response.json())
+  .then(json => setProperties(json))
+  console.log("properties", properties)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {properties.map(property => {
+        console.log("app", property)
+        return (
+        <KitchenSinkExample property={property} />)
+      })}
+    </>
   );
 }
 
