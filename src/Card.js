@@ -1,30 +1,29 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import ListGroup from 'react-bootstrap/ListGroup';
 import { useState } from 'react';
+import { Button, Col } from 'react-bootstrap';
 
 export default function PropertyCard(props) {
   const [property, setProperty] = useState(props.property)
 
   return (
+    <Col className="container-fluid">
     <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src={require(`./img/${property.img}`)} />
       <Card.Body>
         <Card.Title>{property.title}</Card.Title>
-        <Card.Text>
-          {property.description}
-        </Card.Text>
+        <Card.Subtitle>{property.pricePerNight} per night</Card.Subtitle>
       </Card.Body>
-      <ListGroup className="list-group-flush">
-        <ListGroup.Item>{property.pricePerNight} per night</ListGroup.Item>
-        <ListGroup.Item>Service Fee: {property.serviceFee}</ListGroup.Item>
-        <ListGroup.Item>cleaningFee: {property.cleaningFee}</ListGroup.Item>
-      </ListGroup>
       <Card.Body>
-        <Card.Link href="#">Card Link</Card.Link>
-        <Card.Link href="#">Another Link</Card.Link>
+        <Button href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-square-fill" viewBox="0 0 16 16">
+  <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm8.93 4.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+</svg>
+ &nbsp; More info
+        </Button>
       </Card.Body>
     </Card>
+    </Col>
   );
 };
 
