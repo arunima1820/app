@@ -4,25 +4,21 @@ import './App.css';
 import PropertyCard from './Card';
 import { useEffect, useState } from 'react';
 import NavScrollExample from './Navbar';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';  
 
-function App() {
-  const[properties, setProperties] = useState([])
- 
-  useEffect(() => {
-    fetch("http://localhost:3000/properties.json")
-    .then(response => response.json())
-    .then(json => setProperties(json))
-    console.log("properties", properties)
-  }, [])
-
-  const ShowProperties = function() {
+function ShowProperties ({ properties, filterText}) {
     return(
       <>
       <Row>
       {properties.map((property, index) => {
+
+        if (property.title.toLowerCase().indexOf(filterText.toLowerCase()) === -1 || property.location.city.toLowerCase().indexOf(filterText.toLowerCase()) === -1) 
+        {
+          return;
+        }
+
         return (
-          <Col className="col-6">
+          <Col className="col-6" key={index}>
           <PropertyCard property={property} key={index} />
           </Col>
         )
@@ -32,12 +28,30 @@ function App() {
     );
   }
 
-  return (
-    <>
-      <NavScrollExample />
-      {ShowProperties()}
-    </>
-  );
-}
+function FilterablePropertyList(){
 
-export default App;
+    const [filterText, setFilterText] = useState('');
+
+
+    const[properties, setProperties] = useState([])
+ 
+    useEffect(() => {
+      fetch("http://localhost:3000/properties.json")
+      .then(response => response.json())
+      .then(json => setProperties(json))
+      console.log("properties", properties)
+   }, [])
+
+
+    return (
+      <>
+        <NavScrollExample onFilterTextChange={setFilterText}/>
+        <ShowProperties properties = {properties} filterText={filterText} />
+     </>
+    
+    );
+}
+  
+export default function App(){
+  return <FilterablePropertyList/>;
+}

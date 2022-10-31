@@ -7,7 +7,8 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
-function NavScrollExample() {
+function NavScrollExample( {onFilterTextChange}) {
+
   return (
     <Navbar bg="light" expand="lg">
       <Container fluid>
@@ -41,6 +42,8 @@ function NavScrollExample() {
               placeholder="Search"
               className="me-2"
               aria-label="Search"
+            
+              onChange={(e) => onFilterTextChange(e.target.value)}
             />
             <Button variant="outline-success">Search</Button>
           </Form>
