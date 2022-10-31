@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import PropertyCard from './Card';
 import { useEffect, useState } from 'react';
+import NavScrollExample from './Navbar';
 
 function App() {
   
@@ -19,7 +20,6 @@ function App() {
     return(
       <>
       {properties.map((property, index) => {
-        console.log("app", property)
         return (
         <PropertyCard property={property} key={index} />)
       })}
@@ -29,6 +29,7 @@ function App() {
 
   return (
     <>
+      <NavScrollExample />
       {ShowProperties()}
     </>
   );
