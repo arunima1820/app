@@ -11,7 +11,8 @@
         "location": {"city":"Miramar Beach", "state": "Florida", "country": "United States"},
         "pets": "No pets",
         "smoking": "No smoking",
-        "propertyType": "Mansion"
+        "propertyType": "Mansion", 
+        "img": "Sandy_Beach_Estate.png"
     },
 
     { "title": "Epic view lakehouse with huge waterfront backyard!", 
@@ -25,10 +26,11 @@
         "beds": "5",
         "location":{"city":"Gun Barrel City", "state":"Texas", "country":"United States"},
         "pets": "No pets",
-        "propertyType": "Lakefront"
+        "propertyType": "Lakefront", 
+        "img": "Epic_view_lakehouse.png"
     },
 
-    { "title": "\"Yellow & Blue\" Elegant Container Tiny House", 
+    { "title": "Yellow & Blue: Elegant Container Tiny House", 
         "description": "Try out container home living in this unique tiny home! Sleeps 2 people in the custom Murphy® bed with a super-comfy Tuft & Needle™ queen size mattress. Kitchen and dining area features induction cooktop, fridge and custom knotty alder tabletop. Hang out on the spacious rooftop deck that lights up beautifully at night with the color-adjustable LED rail lights. Full-size, custom tiled shower and spacious bathroom completes this fascinating container home.", 
         "pricePerNight": "$90",
         "serviceFee": "$68",
@@ -39,7 +41,8 @@
         "beds": "1",
         "location": {"city":"Waco", "state":"Texas", "country": "United States"},
         "pets": "No pets",
-        "propertyType": "Tiny homes"
+        "propertyType": "Tiny homes", 
+        "img": "Yellow_&_Blue.png"
     },
     { 
         "title": "Mid-century masterpiece with pond and panoramas", 
@@ -53,7 +56,8 @@
         "beds": "7",
         "location": {"city":"Telluride", "state":"Colorado", "country": "United States"},
         "pets": "Pets are allowed",
-        "propertyType": "Luxe"
+        "propertyType": "Luxe", 
+        "img": "Sunset_Ridge.png"
       },
       { 
         "title": "The Nest of Hot Springs", 
@@ -67,6 +71,7 @@
         "beds": "2",
         "location": {"city":"Hot Springs", "state":"Arkansas", "country": "United States"},
         "pets": "Pets allowed",
-        "propertyType": "Tent"
+        "propertyType": "Tent", 
+        "img": "Nest_of_Hot_Springs.png"
       }
 ]

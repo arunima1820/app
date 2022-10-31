@@ -3,15 +3,13 @@ import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { useState } from 'react';
 
-export default function KitchenSinkExample({propertyVal}) {
-  const [property, setProperty] = useState()
-
-  setProperty(propertyVal)
+export default function KitchenSinkExample(props) {
+  const [property, setProperty] = useState(props.property)
   console.log("card", property)
 
   return (
     <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
+      <Card.Img variant="top" src={"../public/img/" + property.img} />
       <Card.Body>
         <Card.Title>{property.title}</Card.Title>
         <Card.Text>
