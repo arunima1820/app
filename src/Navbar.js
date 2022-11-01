@@ -14,7 +14,7 @@ function NavScrollExample( {onFilterTextChange}) {
       <Container fluid>
       <a class="navbar-brand" href="#"><img src="./a.png" class="img-fluid" alt="Responsive image"
                     id="logo" width="40"/></a>
-        <Navbar.Brand href="#">JSA Travels</Navbar.Brand>
+        <Navbar.Brand href="#">JAS Travels</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
         
@@ -23,10 +23,6 @@ function NavScrollExample( {onFilterTextChange}) {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Link</Nav.Link>
-            
-          
           </Nav>
           <Form className="d-flex">
             <Form.Control
@@ -36,7 +32,6 @@ function NavScrollExample( {onFilterTextChange}) {
               aria-label="Search"
             
               onChange={(e) => onFilterTextChange(e.target.value)}
-              
             />
           </Form>
         </Navbar.Collapse>

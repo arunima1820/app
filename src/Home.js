@@ -21,6 +21,8 @@ function ShowProperties ({ properties, filterText, setSelectedProperty}) {
         />
       )
     }
+
+    return(<></>);
   })
 
     return(   
